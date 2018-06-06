@@ -6,7 +6,13 @@ import re
 main_page_head = '''
 <head>
     <meta charset="utf-8">
-    <title>Fresh Tomatoes!</title>
+    <title>Movies and Popcorn</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+
 
     <!-- Bootstrap 3 -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
@@ -21,6 +27,21 @@ main_page_head = '''
             margin-top: 200px;
             width: 640px;
             height: 480px;
+        }
+        .background-img {
+        width: 100%;
+        height: 100%;
+        }
+        .background-img-container {
+        z-index: -1;
+        position: fixed;
+        left: 0;
+        top: 0;
+        opacity: 0.8;
+        filter: alpha(opacity=80);
+        height: 100%;
+        width: 100%;
+}
         }
         .hanging-close {
             position: absolute;
@@ -87,6 +108,9 @@ main_page_content = '''
 <!DOCTYPE html>
 <html lang="en">
   <body>
+  <div class="background-img-container">
+    <img class="background-img" src="img/popcorn.jpg" alt="background image">
+  </div>
     <!-- Trailer Video Modal -->
     <div class="modal" id="trailer">
       <div class="modal-dialog">
@@ -105,7 +129,7 @@ main_page_content = '''
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">Fresh Tomatoes Movie Trailers</a>
+            <a class="navbar-brand" href="#"><i class="fas fa-film"></i> Movies and Popcorn</a>
           </div>
         </div>
       </div>
